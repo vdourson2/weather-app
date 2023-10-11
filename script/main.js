@@ -6,15 +6,29 @@ import { HWeather } from './hourWeather.js';
 
 getWeather()
     .then((d) => {
-        console.log(d);
-        console.log('dt',d.list[0].dt);
-        console.log('timezone', d.city.timezone);
-        let t = new Date((d.list[0].dt+d.city.timezone)*1000);
-        console.log('toUTCString',t.toUTCString());
-        console.log('day',t.getUTCDate());
-        console.log('hour',t.getUTCHours());
-        let test = new HWeather(d.list[0],d.city.timezone)
-        console.log(test)
+        let wrapForecast = document.querySelector('.wrapForecast');
+        let listNb = 0;
+        for (let i=1; i<6; i++){
+
+            let day = document.createElement('div');
+            day.classList.add('wrapForecast__day');
+            wrapForecast.appendChild(day);
+            
+            let limit = 3;
+            for (let j=1; j<9;j++){
+                let HourForecast = new HWeather(d.list[listNb],d.city.timezone);
+                if (HourForecast.hour >= limit) { //remplacer par un while
+                    day.innerHTML += '<div class="wrapForecast__day__wrapHour"></div>';
+                }
+                else {
+                    day.innerHTML += HourForecast.display();
+                    listNb++;
+                }
+                limit +=3;
+            }
+        }
+        // console.log(new HWeather(d.list[0],d.city.timezone))
+        
     });
 
 
