@@ -9,8 +9,7 @@ Becode exercise 18 : create a weather app with http flow and dom manipulation
 ![Printscreen desktop](assets/Printscreen-desktop.png)
 
 ## Used languages
-HTML, SASS, JavaScript
-Vite
+HTML, SASS, JavaScript, Vite
 
 ## Authors
 Virginie Dourson
