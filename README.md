@@ -23,11 +23,3 @@ WIP
 ## Github page
 https://weather-app-gray-omega.vercel.app/
 
-## Note
-As I already did this projet with Becode/Keller5, I took time to explore things I hadn't understand/had time to explore before :
-- understand bundling, transpiling, linting, formatting and package managers with Javascript 
-- create a project with Vite, and get used to it utilisation, and working
-- understand environnement variables
-- try to secure my API key from exposing it on github (WIP)
-- clarify relative paths
-
