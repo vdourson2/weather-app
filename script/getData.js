@@ -1,6 +1,7 @@
 export async function getWeather(place) {
     try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${place}&lang=fr&appid=${import.meta.env.VITE_KEY_WEATHERAPP}&units=metric`);
+        let key = import.meta.env.VITE_KEY_WEATHERAPP;
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${place}&lang=fr&appid=${key}&units=metric`);
         const json = await response.json();
         //localStorage.setItem("data",JSON.stringify(json));
         console.log(import.meta.env);
