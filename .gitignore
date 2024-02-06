@@ -24,5 +24,4 @@ node_modules
 *.sw?
 
 .env
-
-README.env
+.env.production
